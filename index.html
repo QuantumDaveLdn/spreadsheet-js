@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Functional Programming Spreadsheet</title>
+  </head>
+  <body>
+    <div id="formula-guide">
+        <h2>Spreadsheet Quick Guide</h2>
+        <p><strong>How to Use Formulas:</strong></p>
+        <ul>
+        <li>Start all formulas with an equals sign (<code>=</code>). Example: <code>=A1+10</code></li>
+        <li>Refer to other cells by their ID (e.g., <code>A1</code>, <code>B12</code>). Cell IDs are not case-sensitive in formulas.</li>
+        <li>Use ranges in functions:
+            <ul>
+            <li>Column: <code>A1:A5</code> (A1, A2, A3, A4, A5)</li>
+            <li>Row: <code>A1:E1</code> (A1, B1, C1, D1, E1)</li>
+            <li>Block: <code>A1:C3</code> (A1 to C1, A2 to C2, A3 to C3)</li>
+            </ul>
+        </li>
+        <li>Arithmetic: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> (<code>*</code> and <code>/</code> are calculated first).</li>
+        </ul>
+
+        <p><strong>Available Functions:</strong></p>
+        <div class="function-list-container">
+        <div class="function-category">
+            <span><strong>Core:</strong></span>
+            <code>SUM(args)</code> <code>AVERAGE(args)</code> <code>MEDIAN(args)</code>
+        </div>
+        <div class="function-category">
+            <span><strong>Logic/Filtering:</strong></span>
+            <code>EVEN(args)</code> <code>SOMEEVEN(args)</code> <code>EVERYEVEN(args)</code> <code>HAS2(args)</code> <code>NODUPES(args)</code>
+        </div>
+        <div class="function-category">
+            <span><strong>Manipulation/Generation:</strong></span>
+            <code>FIRSTTWO(args)</code> <code>LASTTWO(args)</code> <code>INCREMENT(args)</code> <code>RANDOM(min,max)</code> <code>RANGE(start,end)</code>
+        </div>
+        </div>
+    </div>
+
+    <div id="container">
+        <div></div> </div>
+
+    <script src="./script.js"></script>
+    </body>
+</html>

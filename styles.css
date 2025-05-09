@@ -1,0 +1,192 @@
+body {
+    background-color: #121212;
+    color: #c9d1d9;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+  
+#container {
+    display: grid;
+    grid-template-columns: 60px repeat(10, 180px);
+    grid-template-rows: 40px repeat(99, 40px);
+    gap: 1px;
+    background-color: #333333;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    max-height: 85vh;
+    width: fit-content;
+    max-width: calc(100% - 40px);
+}
+  
+.label {
+    background-color: #252525;
+    color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    padding: 0 5px;
+    box-sizing: border-box;
+    user-select: none;
+}
+  
+input[type="text"] {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 0.9em;
+    font-family: inherit;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s ease-in-out;
+    border-radius: 0;
+}
+  
+input[type="text"]:focus {
+    box-shadow: inset 0 0 0 2px #007bff;
+    position: relative;
+    z-index: 1;
+}
+  
+#container > div:first-child {
+    background-color: #202020;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    border-bottom: 1px solid #333333;
+    border-right: 1px solid #333333;
+}
+  
+#container > .label:nth-child(n+2):nth-child(-n+11) {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid #333333;
+}
+  
+#container > .label:nth-child(11n+12) {
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    text-transform: none;
+    border-right: 1px solid #333333;
+}
+  
+#container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+  
+#container::-webkit-scrollbar-track {
+    background: #252525;
+    border-radius: 8px;
+}
+  
+#container::-webkit-scrollbar-thumb {
+    background-color: #555555;
+    border-radius: 10px;
+    border: 2px solid #252525;
+}
+  
+#container::-webkit-scrollbar-thumb:hover {
+    background-color: #777777;
+}
+  
+#container::-webkit-scrollbar-corner {
+    background: #202020;
+}
+  
+#formula-guide {
+    background-color: #22272e;
+    color: #c9d1d9;
+    padding: 20px 30px;
+    margin: 0 auto 30px auto;
+    border: 1px solid #373e47;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    max-width: 900px;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    font-size: 0.95em;
+}
+  
+#formula-guide h2 {
+    color: #58a6ff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #373e47;
+    padding-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+  
+#formula-guide p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+  
+#formula-guide ul {
+    list-style-position: outside;
+    margin-left: 0;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+  
+#formula-guide ul ul {
+    margin-top: 5px;
+    margin-bottom: 8px;
+    padding-left: 25px;
+}
+  
+#formula-guide li {
+    margin-bottom: 8px;
+}
+  
+#formula-guide code {
+    background-color: #1c2128;
+    color: #c9d1d9;
+    padding: 3px 7px;
+    border-radius: 6px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 0.9em;
+    border: 1px solid #30363d;
+}
+  
+#formula-guide .function-list-container {
+    margin-top: 10px;
+}
+  
+#formula-guide .function-category {
+    margin-bottom: 12px;
+    line-height: 1.8;
+}
+  
+#formula-guide .function-category span {
+    font-weight: 600;
+    color: #8b949e;
+    margin-right: 8px;
+    display: block;
+    margin-bottom: 5px;
+}
+  
+#formula-guide .function-category code {
+    margin-right: 6px;
+    margin-bottom: 6px;
+    display: inline-block;
+}
