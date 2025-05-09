@@ -42,7 +42,7 @@ This application recreates basic spreadsheet functionality with a clean, dark-mo
 
   OR
 
-  Visit the github pages associated with this repo: :::
+  Visit the github pages associated with this repo: https://quantumdaveldn.github.io/spreadsheet-js/
 
 4. Using the spreadsheet:
    - Type values or text in any cell
